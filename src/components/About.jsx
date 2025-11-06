@@ -17,8 +17,8 @@ export default function About() {
             Technology (CGPA 8.18)
           </li>
           <li>
-            <strong>Cert:</strong> Java Full Stack Development — KodNest (Mar
-            2025)
+            <strong>Certifications:</strong> Java Full Stack Development —
+            KodNest (Mar 2025)
           </li>
           <li>
             <strong>Location:</strong> YSR Kadapa, India

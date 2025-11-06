@@ -26,12 +26,17 @@ function ProjectCard({ title, desc, tags, link }) {
 export default function Projects() {
   const projects = [
     {
+      title: "Lucky Draw Application",
+      desc: "Interactive React-based lucky draw system with animated winner reveal, reusable components, and suspense-based random selection.",
+      tags: ["React.js", "CSS3", "useState", "react-confetti"],
+      link: "#", // If you deploy it, add your Netlify/Vercel URL here
+    },
+    {
       title: "SalesSavvy CRM",
       desc: "CRM built using Spring Boot, React and MySQL. Improved data efficiency and UI responsiveness.",
       tags: ["Spring Boot", "React", "MySQL"],
       link: "#",
     },
-    // Add more project objects here
   ];
 
   return (
