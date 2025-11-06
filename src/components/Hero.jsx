@@ -50,7 +50,7 @@ export default function Hero() {
         </p>
 
         <p className="hero-desc">
-          Passionate about building scalable backend systems and polished
+          Passionate about building scalable backend systems and poblished
           frontend interfaces.
         </p>
 

@@ -211,57 +211,116 @@ body {
   color: var(--accent);
 }
 
+/* ===== Contact Section Layout ===== */
 .contact-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-  margin-top: 30px;
-}
-
-/* Left Info Panel */
-.contact-info p {
-  margin-bottom: 18px;
-  font-size: 16px;
-}
-.contact-info a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.social-icons {
   display: flex;
-  gap: 16px;
-  margin: 18px 0;
-}
-.social-icons a {
-  font-size: 28px;
-  color: white;
-  transition: 0.3s;
-}
-.social-icons a:hover {
-  color: var(--neon);
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 35px;
+  flex-wrap: wrap;
 }
 
-/* Right Form Panel */
+/* Left Side Contact Info */
+.contact-info {
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Right Side Form */
+.contact-form {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Input + Textarea Styling */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  background: #1a1a1a;
-  border: none;
-  outline: none;
   padding: 14px;
+  background: var(--card);
+  color: var(--muted);
+  border: 1px solid rgba(0, 255, 200, 0.35);
   border-radius: 8px;
-  color: white;
-  margin-bottom: 14px;
-}
-.contact-form textarea {
-  height: 170px;
+  outline: none;
   resize: none;
+  transition: 0.25s;
 }
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--neon);
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.45);
+}
+
+/* Social Icon Row */
+.social-icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 5px;
+}
+
+.social-icons a {
+  color: var(--accent);
+  font-size: 26px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--neon);
+  transform: translateY(-4px);
+}
+
+/* Buttons */
+.glow-btn,
 .submit-btn {
-  width: 100%;
-  margin-top: 10px;
+  width: fit-content; /* Fit button to text */
+  padding: 9px 16px; /* Clean compact size */
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+}
+
+/* Neon Glow Hover */
+.glow-btn:hover,
+.submit-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 18px rgba(0, 255, 200, 0.45);
+}
+
+/* Fix layout on smaller screens */
+@media (max-width: 768px) {
+  .contact-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 45px;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .glow-btn,
+  .submit-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* ===== Footer ===== */
